@@ -1,6 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const User = require("../models/User");
+const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const multer = require("multer");
 const cloudinary = require("cloudinary");
