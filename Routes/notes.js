@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const NotesController = require("../controller/NotesController");
+const NotesController = require("../Controllers/NotesController");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
