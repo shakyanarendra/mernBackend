@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../Controllers/AuthController");
+const authController = require("../controller/Authcontroller");
 const multer = require("multer");
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
