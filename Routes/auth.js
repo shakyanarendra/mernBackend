@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../controller/Authcontroller");
+const authController = require("../Controllers/AuthController");
 const multer = require("multer");
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
@@ -12,7 +12,6 @@ cloudinary.config({
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
-
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -28,12 +27,11 @@ const storage = multer.diskStorage({
 var upload = multer({
     storage: storage
 });
-// SIGN UP
+
+// Signup
 router.post("/signup", upload.single("profileImage"), authController.signup);
 
-// LOGIN
-
-
+// Login
 router.post("/login", authController.login);
 
-module.exports=router;
+module.exports = router;
